@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css"
+			href="LoLisTRASH.css">
+			<script>
+function myMap() {
+  var london = new google.maps.LatLng(51.508742,-0.120850);
+  var DC = new google.maps.LatLng(38.8932944,-77.0363697);
+  var SPOKANE = new google.maps.LatLng(47.9654697,-116.5419401);
+  var TOKYO = new google.maps.LatLng(35.7380321,139.7315154);
+  var OSAKA = new google.maps.LatLng(34.6784656,135.4602162);
+  var HOKKAIDO = new google.maps.LatLng(43.3840155,142.7891874);
+  var SEOUL = new google.maps.LatLng(37.5662108,126.9777205);
+  var JEJU = new google.maps.LatLng(33.5002947,126.5328145);
+  var DUBAI = new google.maps.LatLng(25.199456,55.2764453);
+  var VENICE = new google.maps.LatLng(45.4408998,12.315591);
+  var ROME = new google.maps.LatLng(41.9027644,12.4964624);
+  var PARIS = new google.maps.LatLng(48.8583767,2.2943062);
+  var OXFORD = new google.maps.LatLng(51.7566374,-1.256887);
+  var HAWAII = new google.maps.LatLng(21.4387377,-157.9972334);
+  var SF = new google.maps.LatLng(37.7510446,-122.437785);
+   var LA = new google.maps.LatLng(34.0718543,-118.3588497);
+  
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {center: LA, zoom: 4};
+  var map = new google.maps.Map(mapCanvas,mapOptions);
+  var flightPath = new google.maps.Polyline({
+    path: [LA, SF, SPOKANE, DC, london, OXFORD, PARIS, ROME, VENICE, DUBAI, SEOUL, JEJU, TOKYO, OSAKA, HOKKAIDO, HAWAII, LA],
+    strokeColor: "#0000FF",
+    strokeOpacity: 0.8,
+    strokeWeight: 2
+  });
+  flightPath.setMap(map);
+}
+</script>
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCNMZiSPpyzDA3vzK3h4Ck_qQyTigqBZsw&callback=myMap" async defer></script>
+
+</head>
+<body>
+<ul id="navbar">
+				
+				<li class ="navitem"><a href ="TURNT.html">Home</a></li>
+				<li class ="navitem"><a href ="MAP5.0.html">Big Ol' Map </a></li>
+				<li class ="navitem"><a href ="QD.html">Specific places for Destinations </a></li>
+				
+			</ul>
+			
+<div id="map" style="width:100%;height:1000px;margin-top:30px"></div>
+
+
+</body>
+</html>
